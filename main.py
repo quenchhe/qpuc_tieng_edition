@@ -28,8 +28,6 @@ def buzz(contestant):
                 contestants[c]['label'].config(bg='red')
                 start_blinking(contestants[c]['label'])
                 contestants[c]['has_buzzed'] = True
-            else:
-                contestants[c]['button'].config(state=tk.DISABLED)
 
 def start_blinking(label):
     def toggle_color():
@@ -54,8 +52,6 @@ def reset_buzzers():
     for c in contestants:
         contestants[c]['has_buzzed'] = False
         contestants[c]['label'].config(bg='white')
-        if contestants[c]['button'].cget('state') != tk.DISABLED:
-            contestants[c]['button'].config(state=tk.NORMAL)
 
 # Load and display background image
 background_image = Image.open('data\media\images\\background.png')
@@ -69,12 +65,10 @@ def display_contestant_images(names):
         image = Image.open(f'data\media\images\players\{name.lower()}.png')  # Assuming you have images named alice.jpg, bob.jpg, etc.
         image = image.resize((100, 100), Image.LANCZOS)
         photo = ImageTk.PhotoImage(image)
-        label = tk.Label(root, image=photo)
+        label = tk.Label(root, image=photo, text=name, compound="bottom", font=("Arial", 18))
         label.image = photo  # Keep a reference to avoid garbage collection
         label.grid(row=i, column=0, padx=20, pady=20)
-        button = tk.Button(root, text=f"Buzz {name}", font=("Arial", 18), command=lambda n=name: buzz(n))
-        button.grid(row=i, column=1, padx=20, pady=20)
-        contestants[name] = {'label': label, 'button': button, 'has_buzzed': False}
+        contestants[name] = {'label': label, 'has_buzzed': False}
 
 # Adjust the main window dimensions and placement
 root.geometry("1920x1080")
@@ -97,10 +91,6 @@ def on_key_press(event):
         if buzzed is not None:
             stop_blinking()
             contestants[buzzed]['label'].config(bg='gray')
-            contestants[buzzed]['button'].config(state=tk.DISABLED)
-            for c in contestants:
-                if c != buzzed:
-                    contestants[c]['button'].config(state=tk.NORMAL)
             buzzed = None
 
 # Bind key press event
