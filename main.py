@@ -63,13 +63,14 @@ background_label.place(relwidth=1, relheight=1)
 
 # Display contestant images
 def display_contestant_images(names):
+    buzzer_image = Image.open(f'data\media\images\\buzzer\\buzzer_neutral.png')
     for i, name in enumerate(names):
         image = Image.open(f'data\media\images\players\{name.lower()}.png')  # Assuming you have images named alice.jpg, bob.jpg, etc.
         image = image.resize((100, 100), Image.LANCZOS)
         photo = ImageTk.PhotoImage(image)
         label = tk.Label(root, image=photo, text=name, compound="bottom", font=("Arial", 18))
         label.image = photo  # Keep a reference to avoid garbage collection
-        label.grid(row=i, column=0, padx=20, pady=20)
+        label.grid(row=0, column=i, padx=20, pady=20)
         score_label = tk.Label(root, text="Score: 0", font=("Arial", 18))
         score_label.grid(row=i, column=1, padx=20, pady=20)
         contestants[name] = {'label': label, 'score_label': score_label, 'has_buzzed': False, 'score': 0}
