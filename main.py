@@ -50,8 +50,10 @@ def reset_buzzers():
     buzzed = None
     stop_blinking()
     for c in contestants:
+        contestants[c]['score_label'].config(text=f"Score: {contestants[c]['score']}")
         contestants[c]['has_buzzed'] = False
         contestants[c]['label'].config(bg='white')
+
 
 # Load and display background image
 background_image = Image.open('data\media\images\\background.png')
@@ -61,14 +63,17 @@ background_label.place(relwidth=1, relheight=1)
 
 # Display contestant images
 def display_contestant_images(names):
+    buzzer_image = Image.open(f'data\media\images\\buzzer\\buzzer_neutral.png')
     for i, name in enumerate(names):
         image = Image.open(f'data\media\images\players\{name.lower()}.png')  # Assuming you have images named alice.jpg, bob.jpg, etc.
         image = image.resize((100, 100), Image.LANCZOS)
         photo = ImageTk.PhotoImage(image)
         label = tk.Label(root, image=photo, text=name, compound="bottom", font=("Arial", 18))
         label.image = photo  # Keep a reference to avoid garbage collection
-        label.grid(row=i, column=0, padx=20, pady=20)
-        contestants[name] = {'label': label, 'has_buzzed': False}
+        label.grid(row=0, column=i, padx=20, pady=20)
+        score_label = tk.Label(root, text="Score: 0", font=("Arial", 18))
+        score_label.grid(row=i, column=1, padx=20, pady=20)
+        contestants[name] = {'label': label, 'score_label': score_label, 'has_buzzed': False, 'score': 0}
 
 # Adjust the main window dimensions and placement
 root.geometry("1920x1080")
@@ -81,17 +86,23 @@ display_contestant_images(contestant_names)
 key_to_contestant = {'a': "Shulk", 'z': "Melia", 'e': "Kino", 'r': "Nene"}
 
 def on_key_press(event):
+    global buzzed
     if event.char in key_to_contestant:
         buzz(key_to_contestant[event.char])
     elif event.char == 'w':  # 'w' key to stop blinking and reset buzzers
         stop_blinking()
         reset_buzzers()
-    elif event.char == 'x':  # 'x' key to gray out the buzzed contestant and enable others
-        global buzzed
+    elif event.char == 'x':  # 'w' key to stop blinking and reset buzzers
+        if buzzed is not None:
+            contestants[buzzed]['score'] += 1
+            stop_blinking()
+            reset_buzzers()
+    elif event.char == 'c':  # 'x' key to gray out the buzzed contestant and enable others
         if buzzed is not None:
             stop_blinking()
             contestants[buzzed]['label'].config(bg='gray')
             buzzed = None
+
 
 # Bind key press event
 root.bind("<Key>", on_key_press)
