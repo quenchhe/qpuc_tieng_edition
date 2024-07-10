@@ -1,0 +1,181 @@
+questions:
+  question_1:
+    question: "Personnage de la mythologie grecque, je suis le fils de Zeus et de Danaé ; mon plus grand exploit est d'avoir tué Méduse, une Gorgone dont le regard pétrifiait quiconque la regardait ; j'ai également sauvé Andromède de la mer."
+    answer: "Persée"
+  question_2:
+    question: "Grand physicien et mathématicien anglais, j'ai formulé les lois de la gravitation universelle et développé le calcul infinitésimal en même temps que Leibniz ; je suis également connu pour mes travaux sur la lumière et l'optique."
+    answer: "Isaac Newton"
+  question_3:
+    question: "Monument emblématique de Paris, je suis une tour de fer puddlé construite par l'ingénieur Gustave Eiffel à l'occasion de l'Exposition universelle de 1889 ; je mesure 324 mètres de haut et je suis l'un des sites touristiques les plus visités au monde."
+    answer: "La Tour Eiffel"
+  question_4:
+    question: "Empire puissant de l'Antiquité, j'ai été fondé par Cyrus le Grand et connu pour mes grandes avancées en matière de gestion administrative et de communication ; je suis tombé sous les coups d'Alexandre le Grand en 330 av. J.-C."
+    answer: "L'Empire Perse"
+  question_5:
+    question: "Écrivain français, je suis l'auteur des œuvres 'Madame Bovary', 'L'Éducation sentimentale' et 'Salammbô' ; mon style se caractérise par le réalisme et une grande précision dans la description des sentiments et des décors."
+    answer: "Gustave Flaubert"
+  question_6:
+    question: "Théorie économique développée par Adam Smith dans son ouvrage 'La Richesse des Nations', je soutiens que la division du travail et la libre concurrence sont essentielles pour la prospérité économique ; mon concept central est la 'main invisible'."
+    answer: "Le libéralisme économique"
+  question_7:
+    question: "Région géographique et culturelle du sud-ouest de la France, je suis connue pour mes paysages de montagnes, mes plages atlantiques, et ma culture basque ; ma capitale économique est Biarritz."
+    answer: "Le Pays Basque"
+  question_8:
+    question: "Peintre et sculpteur espagnol du XXe siècle, je suis l'un des fondateurs du cubisme avec Georges Braque ; mes œuvres célèbres incluent 'Les Demoiselles d'Avignon' et 'Guernica'."
+    answer: "Pablo Picasso"
+  question_9:
+    question: "Ville de Russie, j'ai été le théâtre d'une bataille décisive pendant la Seconde Guerre mondiale qui a marqué un tournant dans le conflit sur le front de l'Est ; ma victoire a affaibli significativement les forces de l'Axe."
+    answer: "Stalingrad"
+  question_10:
+    question: "Instrument de musique à vent de la famille des bois, je suis composé de 23 ou 24 clés et mon nom est issu de l'italien 'flauto piccolo' ; je suis souvent utilisé dans les orchestres symphoniques pour mes sonorités aiguës."
+    answer: "Le piccolo"
+  question_11:
+    question: "Philosophe grec de l'Antiquité, je suis un disciple de Socrate et le maître d'Aristote ; j'ai fondé l'Académie à Athènes et mes œuvres les plus célèbres incluent 'La République' et 'Le Banquet'."
+    answer: "Platon"
+  question_12:
+    question: "Capitale de la France, je suis connue pour mes monuments emblématiques tels que la Tour Eiffel, le Louvre et la Cathédrale Notre-Dame ; je suis également surnommée 'la Ville Lumière'."
+    answer: "Paris"
+  question_13:
+    question: "Savant italien de la Renaissance, je suis connu pour mes travaux sur l'astronomie, la physique et les mathématiques ; j'ai amélioré le télescope et soutenu la théorie héliocentrique de Copernic."
+    answer: "Galilée"
+  question_14:
+    question: "Roi de France de 1643 à 1715, je suis surnommé 'le Roi-Soleil' et mon règne est marqué par la construction du Château de Versailles et par une centralisation du pouvoir royal."
+    answer: "Louis XIV"
+  question_15:
+    question: "Personnage de roman créé par J.K. Rowling, je suis un jeune sorcier étudiant à l'école de Poudlard ; je suis connu pour ma cicatrice en forme d'éclair sur le front et mes affrontements contre Voldemort."
+    answer: "Harry Potter"
+  question_16:
+    question: "Symbole de l'indépendance des États-Unis, je suis une cloche située à Philadelphie ; je suis célèbre pour ma fissure et pour avoir sonné lors de la première lecture publique de la Déclaration d'indépendance en 1776."
+    answer: "La Cloche de la Liberté"
+  question_17:
+    question: "Rivière d'Afrique, je suis la plus longue du monde avec une longueur de 6 650 km ; je traverse plusieurs pays, dont l'Égypte et le Soudan, et j'ai été crucial pour le développement de la civilisation égyptienne."
+    answer: "Le Nil"
+  question_18:
+    question: "Philosophe allemand du XIXe siècle, je suis connu pour ma théorie du communisme et mes œuvres telles que 'Le Manifeste du Parti communiste' et 'Le Capital' ; j'ai collaboré avec Friedrich Engels."
+    answer: "Karl Marx"
+  question_19:
+    question: "Ville d'Italie, je suis célèbre pour mes canaux, mes gondoles et mon carnaval ; mes principaux monuments incluent la basilique Saint-Marc et le Palais des Doges."
+    answer: "Venise"
+  question_20:
+    question: "Écrivain et philosophe français, je suis l'auteur de 'Candide' et un des représentants majeurs du siècle des Lumières ; je suis connu pour mon esprit critique et mes combats pour la tolérance et la liberté d'expression."
+    answer: "Voltaire"
+  question_21:
+    question: "Science qui étudie les êtres vivants, je me divise en plusieurs branches comme la botanique, la zoologie et la microbiologie ; je suis la base des études médicales et environnementales."
+    answer: "La biologie"
+  question_22:
+    question: "Pays d'Amérique du Sud, je suis le plus grand en superficie et le cinquième plus grand en population au monde ; ma capitale est Brasília et je suis célèbre pour le carnaval de Rio de Janeiro."
+    answer: "Le Brésil"
+  question_23:
+    question: "Roi légendaire de la mythologie arthurienne, je suis le fondateur de la Table Ronde et je suis marié à la reine Guenièvre ; mes aventures incluent la quête du Saint Graal."
+    answer: "Le roi Arthur"
+  question_24:
+    question: "Astronome polonais de la Renaissance, je suis célèbre pour ma théorie héliocentrique qui place le Soleil au centre de l'univers ; mon œuvre principale est 'De revolutionibus orbium coelestium'."
+    answer: "Copernic"
+  question_25:
+    question: "Personnage historique, je suis la première femme à avoir volé en solo à travers l'Atlantique en 1932 ; ma disparition mystérieuse en 1937 lors d'un vol autour du monde reste un des plus grands mystères de l'aviation."
+    answer: "Amelia Earhart"
+  question_26:
+    question: "Ville de Turquie, je suis célèbre pour mes sites historiques comme Sainte-Sophie, la Mosquée Bleue et le palais de Topkapi ; j'ai été autrefois appelée Byzance et Constantinople."
+    answer: "Istanbul"
+  question_27:
+    question: "Monarque britannique, je suis connue pour mon long règne de 1952 à 2022 et pour avoir modernisé la monarchie tout en maintenant des traditions séculaires ; je suis la mère du roi Charles III."
+    answer: "La reine Elizabeth II"
+  question_28:
+    question: "Chanson emblématique du groupe Queen, je suis une suite musicale de près de 6 minutes sortie en 1975 ; mon titre est composé de termes arabes et italiens, et je suis célèbre pour ma structure non conventionnelle."
+    answer: "Bohemian Rhapsody"
+  question_29:
+    question: "Personnage de bande dessinée créé par René Goscinny et Albert Uderzo, je suis un petit gaulois moustachu connu pour ma force surhumaine lorsqu'on me donne de la potion magique ; mes aventures se déroulent à l'époque romaine."
+    answer: "Astérix"
+  question_30:
+    question: "Écrivain américain, je suis l'auteur de 'Moby Dick', un roman qui raconte la poursuite obsessionnelle du capitaine Achab pour une gigantesque baleine blanche ; je suis également connu pour 'Billy Budd'."
+    answer: "Herman Melville"
+  question_31:
+    question: "Artiste néerlandais du XVIIe siècle, je suis connu pour mes peintures de paysages, de scènes de la vie quotidienne et de portraits ; mes œuvres célèbres incluent 'La Jeune Fille à la perle'."
+    answer: "Johannes Vermeer"
+  question_32:
+    question: "Personnage mythologique grec, je suis le roi d'Ithaque et l'un des principaux héros de la guerre de Troie ; mon long voyage de retour chez moi est raconté dans l'Odyssée, un poème épique attribué à Homère."
+    answer: "Ulysse"
+  question_33:
+    question: "Philosophe allemand du XIXe siècle, je suis l'auteur de 'Ainsi parlait Zarathoustra' et je suis connu pour ma critique de la morale chrétienne et ma notion du 'surhomme' ; ma phrase célèbre est 'Dieu est mort'."
+    answer: "Friedrich Nietzsche"
+  question_34:
+    question: "Région viticole de France, je suis célèbre pour mes vins rouges de Bordeaux, mes châteaux et mes paysages de vignobles ; ma capitale est Bordeaux."
+    answer: "La région Bordelaise"
+  question_35:
+    question: "Comète de la famille Halley, je suis connue pour ma période orbitale de 75 à 76 ans ; ma dernière apparition visible depuis la Terre remonte à 1986."
+    answer: "La comète de Halley"
+  question_36:
+    question: "Ville historique de l'Italie centrale, je suis célèbre pour mon centre historique médiéval, mes tours médiévales et mes pâtes ; mes monuments célèbres incluent la Piazza del Campo et la cathédrale."
+    answer: "Sienne"
+  question_37:
+    question: "Président des États-Unis de 1861 à 1865, je suis connu pour avoir dirigé le pays durant la guerre de Sécession et pour avoir proclamé l'émancipation des esclaves en 1863 ; je suis assassiné en 1865."
+    answer: "Abraham Lincoln"
+  question_38:
+    question: "Film de 1994 réalisé par Robert Zemeckis, je raconte l'histoire d'un homme simple du sud des États-Unis qui traverse les événements majeurs du XXe siècle ; mon personnage principal est interprété par Tom Hanks."
+    answer: "Forrest Gump"
+  question_39:
+    question: "Théorie physique développée par Albert Einstein en 1905, je soutiens que la vitesse de la lumière dans le vide est constante et indépendante du mouvement de la source de lumière ; je révolutionne la compréhension de l'espace et du temps."
+    answer: "La théorie de la relativité restreinte"
+  question_40:
+    question: "Ville portuaire de l'Australie, je suis connue pour mon opéra en forme de voiles de bateau et pour mon pont célèbre ; je suis la plus grande ville du pays mais pas sa capitale."
+    answer: "Sydney"
+  question_41:
+    question: "Écrivain français du XIXe siècle, je suis connu pour mes romans naturalistes tels que 'Germinal', 'L'Assommoir' et 'Au Bonheur des Dames' ; je suis le chef de file du mouvement naturaliste."
+    answer: "Émile Zola"
+  question_42:
+    question: "Roi d'Angleterre de 1509 à 1547, je suis connu pour mes six mariages et pour avoir rompu avec l'Église catholique pour créer l'Église d'Angleterre ; je suis le père de la reine Elizabeth I."
+    answer: "Henri VIII"
+  question_43:
+    question: "Série télévisée américaine de science-fiction, je suis créée par Gene Roddenberry et je mets en scène les aventures de l'équipage de l'USS Enterprise ; ma devise est 'Exploring strange new worlds'."
+    answer: "Star Trek"
+  question_44:
+    question: "Compositeur et pianiste allemand du XVIIIe et XIXe siècles, je suis l'auteur de symphonies, de concertos et de sonates célèbres ; mes œuvres célèbres incluent la Symphonie n° 9 et la 'Lettre à Élise'."
+    answer: "Ludwig van Beethoven"
+  question_45:
+    question: "Fleuve d'Europe, je traverse plusieurs pays dont l'Allemagne, l'Autriche et la Hongrie ; je suis célèbre pour mes valses composées par Johann Strauss et mon nom signifie 'bleu'."
+    answer: "Le Danube"
+  question_46:
+    question: "Insecte social vivant en colonies, je suis connu pour ma capacité à produire du miel et pour mon rôle crucial dans la pollinisation des plantes ; ma reine peut pondre jusqu'à 2000 œufs par jour."
+    answer: "L'abeille"
+  question_47:
+    question: "Ville d'Égypte, je suis célèbre pour mes monuments antiques tels que les Pyramides de Gizeh et le Sphinx ; je suis la capitale du pays et abrite le Musée égyptien."
+    answer: "Le Caire"
+  question_48:
+    question: "Opéra de Giuseppe Verdi, je raconte l'histoire d'amour entre un capitaine de la garde et une esclave éthiopienne ; ma première a eu lieu au Caire en 1871."
+    answer: "Aïda"
+  question_49:
+    question: "Théorie mathématique et physique développée par Isaac Newton, je décris la gravitation universelle et explique les mouvements des planètes et des objets sur Terre ; je suis énoncée dans 'Principia Mathematica'."
+    answer: "La loi de la gravitation universelle"
+  question_50:
+    question: "Peintre néerlandais du XVIIe siècle, je suis connu pour mes scènes de la vie quotidienne, mes paysages et mes autoportraits ; mes œuvres célèbres incluent 'La Ronde de nuit' et 'La Laitière'."
+    answer: "Rembrandt"
+  question_51:
+    question: "Ville d'Angleterre, je suis célèbre pour mon université fondée en 1209, qui est l'une des plus anciennes et prestigieuses du monde ; des figures célèbres comme Isaac Newton et Charles Darwin y ont étudié."
+    answer: "Cambridge"
+  question_52:
+    question: "Invention de Johannes Gutenberg au XVe siècle, je suis un procédé permettant la reproduction rapide et en série de textes et d'images ; j'ai révolutionné la diffusion des connaissances en Europe."
+    answer: "L'imprimerie"
+  question_53:
+    question: "Écrivain britannique du XXe siècle, je suis l'auteur de '1984' et 'La Ferme des animaux' ; mes œuvres sont des critiques des régimes totalitaires et explorent les thèmes de la surveillance et de la liberté."
+    answer: "George Orwell"
+  question_54:
+    question: "Discipline scientifique qui étudie les étoiles, les planètes et les autres objets célestes, je m'intéresse également à l'origine et à l'évolution de l'univers ; mes outils incluent les télescopes et les satellites."
+    answer: "L'astronomie"
+  question_55:
+    question: "Roman de Mary Shelley publié en 1818, je raconte l'histoire d'un scientifique qui crée un être vivant à partir de morceaux de cadavres ; ce monstre devient une figure emblématique de la littérature gothique."
+    answer: "Frankenstein"
+  question_56:
+    question: "Peintre impressionniste français, je suis connu pour mes peintures de la vie parisienne et des bals ; mes œuvres célèbres incluent 'Le Moulin de la Galette' et 'La Loge'."
+    answer: "Auguste Renoir"
+  question_57:
+    question: "Ancienne cité-État de Mésopotamie, je suis connue pour mes jardins suspendus, l'une des sept merveilles du monde antique ; je suis également célèbre pour mon roi Nabuchodonosor II."
+    answer: "Babylone"
+  question_58:
+    question: "Roi des Francs et empereur d'Occident, je suis couronné empereur en l'an 800 par le pape Léon III ; mon règne est marqué par l'expansion de mon empire et la renaissance carolingienne."
+    answer: "Charlemagne"
+  question_59:
+    question: "Théoricien du socialisme scientifique, je suis connu pour mes idées sur la lutte des classes et pour avoir co-écrit 'Le Manifeste du Parti communiste' avec Karl Marx ; je suis l'auteur de 'La Condition de la classe laborieuse en Angleterre'."
+    answer: "Friedrich Engels"
+  question_60:
+    question: "Instrument de musique à cordes pincées, je suis souvent utilisé dans la musique classique, folk et flamenco ; je suis composé d'une caisse de résonance et de six cordes généralement accordées en mi-la-ré-mi-sol-si-mi."
+    answer: "La guitare"

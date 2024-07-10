@@ -1,0 +1,201 @@
+questions:
+  question_1:
+    question: "Quelle est la langue officielle du Brésil ?"
+    proposition: ["Portugais", "Espagnol"]
+    answer: "Portugais"
+  question_2:
+    question: "Quel est le sport national du Japon ?"
+    proposition: ["Sumo", "Judo"]
+    answer: "Sumo"
+  question_3:
+    question: "Quel est le fruit traditionnellement utilisé pour produire du vin ?"
+    proposition: ["Raisin", "Pomme"]
+    answer: "Raisin"
+  question_4:
+    question: "Quelle est la capitale de l'Argentine ?"
+    proposition: ["Buenos Aires", "Santiago"]
+    answer: "Buenos Aires"
+  question_5:
+    question: "Quel est le plus grand océan de la Terre ?"
+    proposition: ["Océan Pacifique", "Océan Atlantique"]
+    answer: "Océan Pacifique"
+  question_6:
+    question: "Quel est l'animal terrestre le plus rapide ?"
+    proposition: ["Guépard", "Antilope"]
+    answer: "Guépard"
+  question_7:
+    question: "Quelle est la plus haute montagne d'Afrique ?"
+    proposition: ["Mont Kilimandjaro", "Mont Kenya"]
+    answer: "Mont Kilimandjaro"
+  question_8:
+    question: "Quelle est la capitale de la Nouvelle-Zélande ?"
+    proposition: ["Wellington", "Auckland"]
+    answer: "Wellington"
+  question_9:
+    question: "Quel est le sport le plus pratiqué au monde ?"
+    proposition: ["Football", "Basketball"]
+    answer: "Football"
+  question_10:
+    question: "Quel est le plus grand désert chaud du monde ?"
+    proposition: ["Sahara", "Gobi"]
+    answer: "Sahara"
+  question_11:
+    question: "Quel est le plus grand mammifère terrestre ?"
+    proposition: ["Éléphant", "Hippopotame"]
+    answer: "Éléphant"
+  question_12:
+    question: "Quelle est la langue officielle la plus parlée au Canada ?"
+    proposition: ["Anglais", "Français"]
+    answer: "Anglais"
+  question_13:
+    question: "Quel est le plus long fleuve du monde ?"
+    proposition: ["Amazone", "Nil"]
+    answer: "Amazone"
+  question_14:
+    question: "Quel est le plus grand lac d'eau douce en volume ?"
+    proposition: ["Lac Baïkal", "Lac Supérieur"]
+    answer: "Lac Baïkal"
+  question_15:
+    question: "Quel est l'élément chimique le plus abondant dans l'univers ?"
+    proposition: ["Hydrogène", "Hélium"]
+    answer: "Hydrogène"
+  question_16:
+    question: "Quelle est la distance moyenne entre la Terre et le Soleil ?"
+    proposition: ["149,6 millions de kilomètres", "93 millions de kilomètres"]
+    answer: "149,6 millions de kilomètres"
+  question_17:
+    question: "Quel est le nom du plus grand volcan de notre système solaire ?"
+    proposition: ["Olympus Mons", "Mauna Kea"]
+    answer: "Olympus Mons"
+  question_18:
+    question: "Quelle mer est bordée par la Jordanie et Israël et est connue pour sa salinité extrême ?"
+    proposition: ["Mer Morte", "Mer Rouge"]
+    answer: "Mer Morte"
+  question_19:
+    question: "Quel est le nom de l'instrument utilisé pour mesurer l'intensité des tremblements de terre ?"
+    proposition: ["Sismomètre", "Baromètre"]
+    answer: "Sismomètre"
+  question_20:
+    question: "Quel physicien a développé la théorie des cordes ?"
+    proposition: ["Leonard Susskind", "Richard Feynman"]
+    answer: "Leonard Susskind"
+  question_21:
+    question: "Quel est le nom de la protéine qui transporte l'oxygène dans le sang des vertébrés ?"
+    proposition: ["Hémoglobine", "Myoglobine"]
+    answer: "Hémoglobine"
+  question_22:
+    question: "Quelle est la profondeur maximale connue de la fosse des Mariannes ?"
+    proposition: ["10 994 mètres", "9 814 mètres"]
+    answer: "10 994 mètres"
+  question_23:
+    question: "Quel est le nom du premier satellite artificiel mis en orbite autour de la Terre ?"
+    proposition: ["Spoutnik 1", "Explorer 1"]
+    answer: "Spoutnik 1"
+  question_24:
+    question: "Quel est le terme pour la science des comportements et des processus mentaux ?"
+    proposition: ["Psychologie", "Psychiatrie"]
+    answer: "Psychologie"
+  question_25:
+    question: "Quel est le nom de l'algorithme de compression de données utilisé dans le format de fichier JPEG ?"
+    proposition: ["DCT (Discrete Cosine Transform)", "FFT (Fast Fourier Transform)"]
+    answer: "DCT (Discrete Cosine Transform)"
+  question_26:
+    question: "Quel est le nom de l'architecte principal du palais de Versailles ?"
+    proposition: ["Louis Le Vau", "Jules Hardouin-Mansart"]
+    answer: "Louis Le Vau"
+  question_27:
+    question: "Quel est le nom de la première civilisation connue à avoir utilisé l'écriture ?"
+    proposition: ["Sumérienne", "Égyptienne"]
+    answer: "Sumérienne"
+  question_28:
+    question: "Quel est le nom de l'art de la disposition et de la gestion des jardins ?"
+    proposition: ["Paysagisme", "Horticulture"]
+    answer: "Paysagisme"
+  question_29:
+    question: "Quel est le nom de la plus ancienne bibliothèque encore en activité dans le monde ?"
+    proposition: ["Al-Qarawiyyin", "Bodleian Library"]
+    answer: "Al-Qarawiyyin"
+  question_30:
+    question: "Quel est le terme pour un mot ou une phrase qui est le même en avant et en arrière ?"
+    proposition: ["Palindrome", "Anagramme"]
+    answer: "Palindrome"
+  question_31:
+    question: "Quel est le nom du plus petit élément constitutif d'un élément chimique ?"
+    proposition: ["Quark", "Lepton"]
+    answer: "Quark"
+  question_32:
+    question: "Quel est le nom de la plus haute montagne du système solaire ?"
+    proposition: ["Mont Olympe", "Mont Etna"]
+    answer: "Mont Olympe"
+  question_33:
+    question: "Quel est le nom de l'étoile la plus proche du système solaire ?"
+    proposition: ["Proxima Centauri", "Alpha Centauri A"]
+    answer: "Proxima Centauri"
+  question_34:
+    question: "Quel est le nom de la molécule responsable de la couleur verte des plantes ?"
+    proposition: ["Chlorophylle", "Carotène"]
+    answer: "Chlorophylle"
+  question_35:
+    question: "Quel est le nom de la plus ancienne forme de vie connue sur Terre ?"
+    proposition: ["Stromatolite", "Archéobactérie"]
+    answer: "Stromatolite"
+  question_36:
+    question: "Quel est le nom du principe physique qui énonce que l'information ne peut être détruite ni créée ?"
+    proposition: ["Principe de conservation de l'information", "Loi de la thermodynamique"]
+    answer: "Principe de conservation de l'information"
+  question_37:
+    question: "Quel est le nom de la théorie qui décrit l'expansion accélérée de l'univers ?"
+    proposition: ["Théorie de l'inflation cosmique", "Théorie des cordes"]
+    answer: "Théorie de l'inflation cosmique"
+  question_38:
+    question: "Quel est le nom de la plus petite unité de mesure de la lumière ?"
+    proposition: ["Photon", "Femtoseconde"]
+    answer: "Photon"
+  question_39:
+    question: "Quel est le nom du mathématicien qui a formulé les équations fondamentales de l'électromagnétisme ?"
+    proposition: ["James Clerk Maxwell", "Albert Einstein"]
+    answer: "James Clerk Maxwell"
+  question_40:
+    question: "Quel est le nom du plus grand cratère d'impact connu sur Terre ?"
+    proposition: ["Cratère de Vredefort", "Cratère de Chicxulub"]
+    answer: "Cratère de Vredefort"
+  question_41:
+    question: "Quel est le nom du plus grand organisme vivant sur Terre en termes de superficie ?"
+    proposition: ["Le mycélium du champignon Armillaria ostoyae", "Le grand récif corallien"]
+    answer: "Le mycélium du champignon Armillaria ostoyae"
+  question_42:
+    question: "Quel est le nom de l'expérience qui a été la première à prouver que les électrons peuvent se comporter comme des ondes ?"
+    proposition: ["L'expérience de Davisson-Germer", "L'expérience de Franck-Hertz"]
+    answer: "L'expérience de Davisson-Germer"
+  question_43:
+    question: "Quel est le nom de l'hypothèse qui suggère que l'univers pourrait être un gigantesque hologramme ?"
+    proposition: ["L'hypothèse de l'univers holographique", "L'hypothèse du multivers"]
+    answer: "L'hypothèse de l'univers holographique"
+  question_44:
+    question: "Quel est le nom du plus grand animal invertébré connu dans le monde ?"
+    proposition: ["Le calmar géant", "La méduse Nomura"]
+    answer: "Le calmar géant"
+  question_45:
+    question: "Quel est le nom du plus petit pays indépendant du monde en termes de superficie ?"
+    proposition: ["La Cité du Vatican", "Monaco"]
+    answer: "La Cité du Vatican"
+  question_46:
+    question: "Quel est le nom du plus ancien micro-organisme connu capable de photosynthèse oxygénique ?"
+    proposition: ["Cyanobactérie", "Archéobactérie"]
+    answer: "Cyanobactérie"
+  question_47:
+    question: "Quel est le nom du mathématicien qui a développé la théorie des nombres premiers ?"
+    proposition: ["Leonhard Euler", "Carl Friedrich Gauss"]
+    answer: "Leonhard Euler"
+  question_48:
+    question: "Quel est le nom de la particule élémentaire qui transmet la force gravitationnelle ?"
+    proposition: ["Graviton", "Boson de Higgs"]
+    answer: "Graviton"
+  question_49:
+    question: "Quel est le nom de l'effet qui explique pourquoi les fréquences élevées d'une onde radio sont réfléchies par la ionosphère de la Terre ?"
+    proposition: ["L'effet Kennelly-Heaviside", "L'effet Compton"]
+    answer: "L'effet Kennelly-Heaviside"
+  question_50:
+    question: "Quel est le nom de la conjecture mathématique qui propose une relation entre les nombres premiers et les zéros non triviaux de la fonction zêta de Riemann ?"
+    proposition: ["La conjecture de Riemann", "La conjecture de Goldbach"]
+    answer: "La conjecture de Riemann"

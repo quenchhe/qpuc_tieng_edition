@@ -1,0 +1,103 @@
+questions:
+  question_1:
+    question: "Qui est un rappeur français"
+    propositions:
+      - Booba
+      - Kaaris
+      - PNL
+      - Nekfeu
+      - Orelsan
+      - Lomepal
+      - Soprano
+      - Maître Gims
+      - Jul
+      - Sch
+      - Roméo Elvis
+    wrong_answer: Roméo Elvis
+  question_2:
+    question: "Qui est un Pokémon"
+    propositions:
+      - Abra
+      - Pikachu
+      - Volcaropod
+      - Tritonde
+      - Pitrouille
+      - Pyrobut
+      - Poussachat
+      - Hastacuda
+      - Pifeuil
+      - Wimessir
+      - Salsésame
+    wrong_answer: Salsésame
+  question_3:
+    question: "Qui est un physicien français"
+    propositions:
+      - Marie Curie
+      - Pierre Curie
+      - André-Marie Ampère
+      - Henri Becquerel
+      - Louis de Broglie
+      - Jean-Baptiste Biot
+      - Hippolyte Fizeau
+      - Gabriel Lippmann
+      - Léon Foucault
+      - Georges Charpak
+      - Charles Christian Lauritsen
+    wrong_answer: Charles Christian Lauritsen
+  question_4:
+    question: "Lequel de ces sports est présent aux Jeux Olympiques de 2024 ?"
+    propositions:
+      - Escalade sportive
+      - Surf
+      - Skateboard
+      - Escrime
+      - Breaking
+      - Canoë slalom
+      - Cyclisme BMX freestyle
+      - Pentathlon moderne
+      - Hockey sur gazon
+      - Karaté
+    wrong_answer: Karaté
+  question_5:
+    question: "Lequels de ces jeux sont sortis entre 2000 et 2010 ?"
+    propositions:
+      - The Elder Scrolls III Morrowind
+      - Half-Life 2
+      - Grand Theft Auto San Andreas
+      - World of Warcraft
+      - BioShock
+      - Portal
+      - Mass Effect
+      - Fallout 3
+      - Uncharted 2 Among Thieves
+      - League of Legends
+      - Sonic Adventure
+    wrong_answer: Sonic Adventure
+  question_6:
+    question: "Lequels de ces plats sont un plat asiatique ?"
+    propositions:
+      - Hoppers
+      - Sinigang
+      - Khao Soi
+      - Laap
+      - Nom Banh Chok
+      - Okonomiyaki
+      - Adobo
+      - Babi Pangang
+      - Nasi Goreng
+      - Tam Biet
+    wrong_answer: Tam Biet
+  question_7:
+    question: "Lequel de ces éléments sont des métaux ?"
+    propositions:
+      - Or
+      - Calcium
+      - Lithium
+      - Cuivre
+      - Palladium
+      - Fer
+      - Radium
+      - Plutonium
+      - Molybdène
+      - Selenium
+    wrong_answer: Selenium
