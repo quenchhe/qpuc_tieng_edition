@@ -1,0 +1,52 @@
+contestants_round_1 :
+  - Shulk
+  - Melia
+  - Kino
+  - Nene
+  - Alvis
+  - Dickson
+  - Dunban
+  - Fiora
+  - Mumkhar
+  - Reyn
+  - Riki
+  - Sharla
+  - Tyrea
+
+contestants_round_2 :
+  - Shulk
+  - Melia
+  - Kino
+  - Nene
+  - Alvis
+  - Dickson
+  - Dunban
+  - Fiora
+  - Mumkhar
+  - Reyn
+
+contesntants_round_3 :
+  team_1 :
+    - Shulk
+    - Melia
+  team_2 :
+    - Kino
+    - Nene
+  team_3 :
+    - Alvis
+    - Dickson
+
+contestant_round_4 :
+  - Shulk
+  - Melia
+  - Nene
+  - Kino
+
+contestant_round_5 :
+  - Shulk
+  - Melia
+  - Nene
+
+contestant_round_6 :
+  - Shulk
+  - Melia

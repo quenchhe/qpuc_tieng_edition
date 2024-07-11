@@ -1,11 +1,13 @@
 import pygame
 import os
 import ctypes
+import yaml
 
 ctypes.windll.user32.SetProcessDPIAware()
 
 # Global vars
 
+TITLE_DIM =  tuple([x * 1 for x in (600, 288)])
 PROFILE_DIM = tuple([x * 1.2 for x in (100, 100)])
 BUZZER_DIM = tuple([x * 1.2 for x in (129, 190)])
 POINT_DIM = tuple([x * 1.2 for x in (74, 31)])
@@ -50,13 +52,9 @@ class Contestant:
         self.score += points
         if self.score >= 4 :
             self.score = 4
-        print(self.score)
-        print("iterating")
         for i in range(3, 3-self.score, -1):
-            print(i)
             img_point_path = f'data/media/images/buzzer/filled_point.png'
             self.img_point[i] = pygame.transform.scale(pygame.image.load(img_point_path), POINT_DIM)
-        print("stop iterating")
 
 
     def get_img_profile(self):
@@ -149,12 +147,18 @@ WHITE = (255, 255, 255)
 # Load images
 background_image = pygame.image.load('data/media/images/background.png')
 background_image = pygame.transform.scale(background_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
+title_image = pygame.image.load('data/media/images/title.png')
+title_image = pygame.transform.scale(title_image, TITLE_DIM)
 
 # Load contestants
 
 contestants = {}
-buzzed = None
-contestant_names = ["Shulk", "Melia", "Kino", "Nene", "Alvis", "Dickson", "Dunban", "Fiora", "Mumkhar", "Reyn", "Riki", "Sharla", "Tyrea"]
+
+# Read the YAML file
+with open('config/contestants.yaml', 'r') as file:
+    data = yaml.safe_load(file)
+contestant_names = data['contestants_round_1']
+
 list_pygame_keys = [pygame.K_a, pygame.K_z, pygame.K_e, pygame.K_r, pygame.K_t, pygame.K_y, pygame.K_u, pygame.K_i, pygame.K_q, pygame.K_s, pygame.K_d, pygame.K_f, pygame.K_g, pygame.K_h, pygame.K_j, pygame.K_k]
 binding_contestant_key = {}
 for i in range(0, len(contestant_names)):
@@ -174,8 +178,11 @@ pygame.display.set_caption("QPUC Tieng Edition")
 pygame.font.init()
 font = pygame.font.SysFont('Arial', 24)
 
-# Load buzzer sound
+# Load buzzer sounds
 buzzer_sound = pygame.mixer.Sound('data\media\sound\\buzzer.mp3')
+bad_answer_sound = pygame.mixer.Sound('data\media\sound\\bad_answer.mp3')
+good_answer_sound = pygame.mixer.Sound('data\media\sound\good_answer.mp3')
+ticking_sound = pygame.mixer.Sound('data\media\sound\\ticking_sound.mp3')
 
 # Functions
 
@@ -185,12 +192,8 @@ def buzz(contestant, game_state):
         game_state.set_buzzing_player_name(contestant.get_name())
         game_state.set_is_buzzing(True)
         contestant.set_is_activated(False)
+        ticking_sound.stop()
         buzzer_sound.play()
-        # for c in contestants:
-        #     if c == contestant:
-        #         contestants[c]['label'].config(bg='red')
-        #         start_blinking(contestants[c]['label'])
-        #         contestants[c]['has_buzzed'] = True
 
 # Timer event
 BLINKING = pygame.USEREVENT + 1
@@ -216,12 +219,15 @@ while running:
 
         elif event.type == pygame.KEYDOWN:
 
+            # Buzzing contestant
             for contestant_name, key in binding_contestant_key.items() :
                 if event.key == key :
                     buzz(contestants[contestant_name], game_state)
 
+            # Right answer
             if event.key == pygame.K_w:
                 if game_state.get_is_buzzing() :
+                    good_answer_sound.play()
                     contestants[game_state.get_buzzing_player_name()].update_score(1)
                 for contestant_name, contestant in contestants.items() :
                     contestant.set_buzzer_state("neutral")
@@ -230,16 +236,23 @@ while running:
                 game_state.set_is_buzzing(False)
                 game_state.set_buzzing_player_name("")
 
-            elif event.key == pygame.K_x:
+            # Reset all
+            elif event.key == pygame.K_c:
                 for contestant_name, contestant in contestants.items() :
                     contestant.set_buzzer_state("neutral")
                     contestant.set_is_activated(True)
                     contestant.set_is_buzzing(False)
                 game_state.set_is_buzzing(False)
                 game_state.set_buzzing_player_name("")
+                ticking_sound.stop()
+                ticking_sound.play(loops=-1)
 
-            elif event.key == pygame.K_c:
+            # Bad answer
+            elif event.key == pygame.K_x:
                 if game_state.get_is_buzzing() :
+                    bad_answer_sound.play()
+                    ticking_sound.stop()
+                    ticking_sound.play(loops=-1)
                     game_state.set_is_buzzing(False)
                     contestants[game_state.get_buzzing_player_name()].set_buzzer_state("deactivated")
                     contestants[game_state.get_buzzing_player_name()].set_is_activated(False)
@@ -252,6 +265,9 @@ while running:
 
     # Draw background image
     screen.blit(background_image, (0, 0))
+
+    # Draw title image
+    screen.blit(title_image, ((SCREEN_WIDTH - TITLE_DIM[0]) // 2, 0))
 
     # Display contestant images and buzzers
     contestants_per_row_true = [CONTESTANT_PER_ROW, len(contestants) - CONTESTANT_PER_ROW]
