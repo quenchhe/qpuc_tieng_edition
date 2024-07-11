@@ -32,6 +32,7 @@ class Contestant:
         self.score = score
         self.is_buzzing = is_buzzing
         self.is_activated = is_activated
+        self.buzzer_state = "neutral"
 
         img_buzzer_path = f'data/media/images/buzzer/buzzer_neutral.png'
         self.img_buzzer = pygame.transform.scale(pygame.image.load(img_buzzer_path), BUZZER_DIM)
@@ -47,6 +48,16 @@ class Contestant:
 
     def update_score(self, points):
         self.score += points
+        if self.score >= 4 :
+            self.score = 4
+        print(self.score)
+        print("iterating")
+        for i in range(3, 3-self.score, -1):
+            print(i)
+            img_point_path = f'data/media/images/buzzer/filled_point.png'
+            self.img_point[i] = pygame.transform.scale(pygame.image.load(img_point_path), POINT_DIM)
+        print("stop iterating")
+
 
     def get_img_profile(self):
         return(self.img_profile)
@@ -94,8 +105,15 @@ class Contestant:
         return(self.is_buzzing)
 
     def set_is_buzzing(self, is_buzzing):
-        self.is_activated = is_buzzing
+        self.is_buzzing = is_buzzing
 
+    def set_buzzer_state(self, state):
+        self.buzzer_state = state
+        img_buzzer_path = f'data/media/images/buzzer/buzzer_{state}.png'
+        self.img_buzzer = pygame.transform.scale(pygame.image.load(img_buzzer_path), BUZZER_DIM)
+
+    def get_buzzer_state(self):
+        return(self.buzzer_state)
 
 class GameState:
 
@@ -107,14 +125,14 @@ class GameState:
     def get_is_buzzing(self):
         return(self.is_buzzing)
 
-    def get_buzzing_player(self):
-        return(self.buzzing_player)
+    def get_buzzing_player_name(self):
+        return(self.buzzing_player_name)
 
     def set_is_buzzing(self, is_buzzing):
         self.is_buzzing = is_buzzing
 
-    def set_buzzing_player(self, buzzing_player):
-        self.buzzing_player = buzzing_player
+    def set_buzzing_player_name(self, buzzing_player_name):
+        self.buzzing_player_name = buzzing_player_name
 
             
 
@@ -137,6 +155,10 @@ background_image = pygame.transform.scale(background_image, (SCREEN_WIDTH, SCREE
 contestants = {}
 buzzed = None
 contestant_names = ["Shulk", "Melia", "Kino", "Nene", "Alvis", "Dickson", "Dunban", "Fiora", "Mumkhar", "Reyn", "Riki", "Sharla", "Tyrea"]
+list_pygame_keys = [pygame.K_a, pygame.K_z, pygame.K_e, pygame.K_r, pygame.K_t, pygame.K_y, pygame.K_u, pygame.K_i, pygame.K_q, pygame.K_s, pygame.K_d, pygame.K_f, pygame.K_g, pygame.K_h, pygame.K_j, pygame.K_k]
+binding_contestant_key = {}
+for i in range(0, len(contestant_names)):
+    binding_contestant_key[contestant_names[i]] = list_pygame_keys[i]
 
 for name in contestant_names:
     contestant = Contestant(name=name)
@@ -160,7 +182,8 @@ buzzer_sound = pygame.mixer.Sound('data\media\sound\\buzzer.mp3')
 def buzz(contestant, game_state):
     is_buzzing = game_state.get_is_buzzing()
     if not is_buzzing and contestant.get_is_activated():
-        game_state.set_buzzing_player(contestant.get_name())
+        game_state.set_buzzing_player_name(contestant.get_name())
+        game_state.set_is_buzzing(True)
         contestant.set_is_activated(False)
         buzzer_sound.play()
         # for c in contestants:
@@ -169,6 +192,10 @@ def buzz(contestant, game_state):
         #         start_blinking(contestants[c]['label'])
         #         contestants[c]['has_buzzed'] = True
 
+# Timer event
+BLINKING = pygame.USEREVENT + 1
+pygame.time.set_timer(BLINKING, 250)
+
 # Main loop
 running = True
 clock = pygame.time.Clock()
@@ -176,26 +203,49 @@ clock = pygame.time.Clock()
 while running:
     # Handle events
     for event in pygame.event.get():
+
         if event.type == pygame.QUIT:
             running = False
+
+        elif event.type == BLINKING:
+            if game_state.get_is_buzzing() :
+                if contestants[game_state.get_buzzing_player_name()].get_buzzer_state() == "on" :
+                    contestants[game_state.get_buzzing_player_name()].set_buzzer_state("neutral")
+                elif contestants[game_state.get_buzzing_player_name()].get_buzzer_state() == "neutral" :
+                    contestants[game_state.get_buzzing_player_name()].set_buzzer_state("on")
+
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_a:
-                buzz(contestants["Shulk"], game_state)
-            elif event.key == pygame.K_z:
-                buzzed = "Melia"
-            elif event.key == pygame.K_e:
-                buzzed = "Kino"
-            elif event.key == pygame.K_r:
-                buzzed = "Nene"
-            elif event.key == pygame.K_w:
-                buzzed = None
+
+            for contestant_name, key in binding_contestant_key.items() :
+                if event.key == key :
+                    buzz(contestants[contestant_name], game_state)
+
+            if event.key == pygame.K_w:
+                if game_state.get_is_buzzing() :
+                    contestants[game_state.get_buzzing_player_name()].update_score(1)
+                for contestant_name, contestant in contestants.items() :
+                    contestant.set_buzzer_state("neutral")
+                    contestant.set_is_activated(True)
+                    contestant.set_is_buzzing(False)
+                game_state.set_is_buzzing(False)
+                game_state.set_buzzing_player_name("")
+
             elif event.key == pygame.K_x:
-                if buzzed:
-                    # contestant_scores[buzzed] += 1
-                    buzzed = None
+                for contestant_name, contestant in contestants.items() :
+                    contestant.set_buzzer_state("neutral")
+                    contestant.set_is_activated(True)
+                    contestant.set_is_buzzing(False)
+                game_state.set_is_buzzing(False)
+                game_state.set_buzzing_player_name("")
+
             elif event.key == pygame.K_c:
-                if buzzed:
-                    buzzed = None
+                if game_state.get_is_buzzing() :
+                    game_state.set_is_buzzing(False)
+                    contestants[game_state.get_buzzing_player_name()].set_buzzer_state("deactivated")
+                    contestants[game_state.get_buzzing_player_name()].set_is_activated(False)
+                    contestants[game_state.get_buzzing_player_name()].set_is_buzzing(False)
+
+
 
     # Clear the screen
     screen.fill(BLACK)
@@ -233,9 +283,6 @@ while running:
         contestant.set_name_pos((first_col_y_row_binded + col_slot * CONTESTANT_XPAD + NAME_X, FIRST_ROW_X + row * CONTESTANT_YPAD + NAME_Y))
         screen.blit(text_surface,contestant.get_name_pos())
 
-        # Blinking stage
-
-        if
 
 
     # Update the screen
